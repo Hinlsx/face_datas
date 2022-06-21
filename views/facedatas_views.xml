@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+        <menuitem id="menu_facedatas" name="FD"/>
+
+        <act_window id="action_face_datas"
+                    name="Face Datas"
+                    res_model="face.datas"
+                    view_mode="tree,form"/>
+
+        <menuitem id="menu_facedatas_return"
+                  name="Return"
+                  parent="menu_facedatas"
+                  action="action_face_datas"/>
+
+
+
+<!--        <record model="ir.ui.view" id="face_datas.list">-->
+<!--            <field name="name">face_datas list</field>-->
+<!--            <field name="model">face.datas</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <tree>-->
+<!--                    <field name="name"/>-->
+<!--                </tree>-->
+<!--            </field>-->
+<!--        </record>-->
+
+    </data>
+</odoo>

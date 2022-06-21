@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_form_datas" model="ir.ui.view">
+        <field name="name">Datas Form</field>
+        <field name="model">face.datas</field>
+        <field name="arch" type="xml">
+            <form string="Datas">
+                <sheet>
+                    <button name="button_send" string="Send" type="object"
+                            attrs="{'invisible':[('datasresult_id', '=', False)]}" icon="fa-adn"/>
+                    <group>
+                        <field name="datasresult_id"/>
+                        <field name="name"/>
+                    </group>
+
+                    <group>
+                        <group>
+                            <field name="json"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_form_datasresult" model="ir.ui.view">
+        <field name="name">Result Form</field>
+        <field name="model">datas.result</field>
+        <field name="arch" type="xml">
+            <form string="result">
+                <sheet>
+                    <notebook>
+                        <page string="Result Return">
+                            <field name="datasresult_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

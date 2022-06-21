@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+face_datas_user,FDatasUser,model_face_datas,facedatas_group_user,1,0,0,0
+face_datas_manager,FDatasManager,model_face_datas,facedatas_group_manager,1,1,1,1
+
+datas_result_user,DResultUser,model_datas_result,datasresult_group_user,1,0,0,0
+datas_result_manager,DResultManager,model_datas_result,datasresult_group_manager,1,1,1,1

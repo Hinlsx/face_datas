@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="model_facedatas_category" model="ir.module.category">
+        <field name="name">Face Datas</field>
+    </record>
+
+    <!--  -->
+    <record id="facedatas_group_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="model_facedatas_category"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="facedatas_group_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="model_facedatas_category"/>
+        <field name="implied_ids" eval="[(4, ref('facedatas_group_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="model_datasresult_category" model="ir.module.category">
+        <field name="name">Datas Result</field>
+    </record>
+
+    <!--  -->
+    <record id="datasresult_group_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="model_datasresult_category"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="datasresult_group_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="model_datasresult_category"/>
+        <field name="implied_ids" eval="[(4, ref('datasresult_group_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]"/>
+    </record>
+
+<!--    <record id="model_datasjson_category" model="ir.module.category">-->
+<!--        <field name="name">Datas Json</field>-->
+<!--    </record>-->
+
+<!--    &lt;!&ndash;  &ndash;&gt;-->
+<!--    <record id="datasjson_group_user" model="res.groups">-->
+<!--        <field name="name">User</field>-->
+<!--        <field name="category_id" ref="model_datasjson_category"/>-->
+<!--        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>-->
+<!--    </record>-->
+
+<!--    <record id="datasjson_group_manager" model="res.groups">-->
+<!--        <field name="name">Manager</field>-->
+<!--        <field name="category_id" ref="model_datasjson_category"/>-->
+<!--        <field name="implied_ids" eval="[(4, ref('datasjson_group_user'))]"/>-->
+<!--        <field name="users" eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]"/>-->
+<!--    </record>-->
+<!--datas_json_user,DJsonUser,model_datas_json,datasjson_group_user,1,0,0,0-->
+<!--datas_json_manager,DJsonManager,model_datas_json,datasjson_group_manager,1,1,1,1-->
+
+
+
+
+</odoo>
